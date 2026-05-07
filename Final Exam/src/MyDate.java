@@ -1,0 +1,31 @@
+    import java.util.Date;
+
+public class MyDate {
+        private int year;
+        private int month;
+        private int day;
+
+        // No-arg constructor (current date)
+        public MyDate() {
+            Date date = new Date();
+            this.year = date.getYear() + 1900;
+            this.month = date.getMonth();
+            this.day = date.getDate();
+        }
+
+        // Constructor with parameters
+        public MyDate(int year, int month, int day) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+
+        public int getYear() { return year; }
+        public int getMonth() { return month; }
+        public int getDay() { return day; }
+
+        @Override
+        public String toString() {
+            return (month + 1) + "/" + day + "/" + year;
+        }
+}
